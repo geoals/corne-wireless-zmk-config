@@ -37,19 +37,19 @@
 
             display-name = "Lower";
             bindings = <
-&kp GRAVE   &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans         &kp MINUS     &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans                 &trans
-&bt BT_CLR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8      &kp NUMBER_9          &kp NUMBER_0           &kp BACKSLASH
-&trans      &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET     &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&kp GRAVE   &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans         &trans        &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&bt BT_CLR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp BACKSLASH
+&trans      &kp EXCL      &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
                                         &trans        &trans        &trans         &trans        &trans         &none
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp PRINTSCREEN  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans           &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans    &trans         &trans        &trans     &trans           &trans
-                         &trans   &trans   &trans    &trans    &trans         &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans              &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp PRINTSCREEN  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans              &kp LEFT        &kp DOWN       &kp UP_ARROW  &kp RIGHT   &kp INSERT       &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans              &kp C_PREVIOUS  &trans         &trans        &kp C_NEXT  &trans           &trans
+                         &trans   &trans   &kp C_PLAY_PAUSE    &trans          &trans         &trans
             >;
         };
     };

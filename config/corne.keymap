@@ -30,6 +30,40 @@
             bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N5 &kp ENTER>;
             label = "UNICOD_AA";
         };
+
+        shifted_base: shifted_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 4 &kp LEFT_SHIFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &mo 4>;
+
+            label = "SHIFTED_BASE";
+        };
+
+        unicode_c_aa: unicode_c_aa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N5 &kp ENTER>;
+            label = "UNICODE_C_AA";
+        };
+
+        unicode_c_ae: unicode_c_ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp NUMBER_6 &kp ENTER>;
+            label = "UNICODE_C_AE";
+        };
+
+        unicode_c_oo: unicode_c_oo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N8 &kp ENTER>;
+            label = "UNICODE_C_OO";
+        };
     };
 
     keymap {
@@ -46,7 +80,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E     &kp R         &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F         &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C     &kp V         &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&mo 4             &kp Z  &kp X  &kp C     &kp V         &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                                 &kp LGUI  &kp LEFT_ALT  &kp SPACE    &kp RET  &mo 1  &mo 2
             >;
         };
@@ -78,10 +112,20 @@
 
         layer_3 {
             bindings = <
-&trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans    &trans  &trans  &trans  &trans  &trans         &unicode_c_aa
+&trans  &trans      &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &unicode_c_oo  &unicode_c_ae
+&trans  &trans      &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans         &trans
                                   &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        base_clone {
+            display-name = "Base clone";
+            bindings = <
+&kp TAB           &kp Q  &kp W  &kp E     &kp R         &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F         &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&trans            &kp Z  &kp X  &kp C     &kp V         &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                &kp LGUI  &kp LEFT_ALT  &kp SPACE    &kp RET  &mo 1  &mo 2
             >;
         };
     };
@@ -91,6 +135,11 @@
 
         third {
             if-layers = <1 2>;
+            then-layer = <3>;
+        };
+
+        shifted_unicode {
+            if-layers = <4 2>;
             then-layer = <3>;
         };
     };

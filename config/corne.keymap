@@ -14,17 +14,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LC(LS(U))>,
-                <&macro_wait_time 0>,
-                <&kp N0>,
-                <&macro_wait_time 0>,
-                <&kp N0>,
-                <&macro_wait_time 0>,
-                <&kp F>,
-                <&macro_wait_time 0>,
-                <&kp N8>,
-                <&macro_wait_time 0>,
-                <&kp ENTER>;
+                <&macro_tap_time 0>,
+                <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N8 &kp ENTER>;
 
             label = "UNICODE_AA";
         };
@@ -33,7 +24,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 1>,
+                <&macro_tap_time 0>,
                 <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp NUMBER_6 &kp ENTER>;
 
             label = "UNICODE_AE";
@@ -43,7 +34,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 1>,
+                <&macro_tap_time 0>,
                 <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N5 &kp ENTER>;
 
             label = "UNICOD_AA";
@@ -67,7 +58,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 1>,
+                <&macro_tap_time 0>,
                 <&kp LC(U) &kp KP_NUMBER_0 &kp KP_NUMBER_0 &kp C &kp KP_NUMBER_5 &kp ENTER>;
 
             label = "UNICODE_C_AA";
@@ -77,7 +68,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 1>,
+                <&macro_tap_time 0>,
                 <&kp LC(RS(U)) &kp N0 &kp N0 &kp C &kp NUMBER_6 &kp ENTER>;
 
             label = "UNICODE_C_AE";
@@ -87,7 +78,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 1>,
+                <&macro_tap_time 0>,
                 <&kp LC(RS(U)) &kp N0 &kp N0 &kp D &kp N8 &kp ENTER>;
 
             label = "UNICODE_C_OO";
@@ -133,9 +124,9 @@
 
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans        &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DEL
-&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp N5         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp BACKSLASH
-&trans     &kp EXCL      &kp AT_SIGN   &kp HASH              &kp DOLLAR             &kp PERCENT    &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&kp GRAVE  &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans        &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DEL
+&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp N5         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0       &kp BACKSLASH
+&trans     &kp EXCL      &kp AT_SIGN   &kp HASH              &kp DOLLAR             &kp PERCENT    &kp CARET     &kp AMPERSAND  &kp ASTERISK  &trans            &trans             &trans
                                        &trans                &trans                 &trans         &trans        &trans         &trans
             >;
         };
